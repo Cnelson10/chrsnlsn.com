@@ -1,0 +1,177 @@
+body {
+    background-color: #F9F6E7;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+header {
+    width: 255px;
+    margin: 0 auto;
+}
+
+.title {
+    line-height: 30px;
+    padding-left: 10px;
+    margin: 20px 0 0 0;
+}
+
+.text {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.medium {
+    font-weight: 600;
+}
+
+.light {
+    font-weight: 300;
+}
+
+.large {
+    font-size: 20px;
+}
+
+.small {
+    font-size: 18px;
+}
+
+.line {
+    height: 3px;
+    width: 150px;
+    background-color: #000000;
+    margin: 0 0 15px;
+}
+
+.icons {
+    margin: 0;
+    list-style: none;
+    padding: 0 0 5px 10px;
+}
+
+.icons li {
+    height: 35px;
+    width: 50px;
+    display: inline-block;
+}
+
+.icon svg {
+    height: 35px;
+    width: 35px;
+}
+
+main {
+    margin: 0 auto;
+}
+
+.projects {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.proj-group {
+    float: left;
+}
+
+.display-1 {
+    display: inline-block;
+}
+
+.project {
+    min-width: 234px;
+    min-height: 154px;
+    border: solid #000000 3px;
+    text-align: center;
+}
+
+.dots {
+    text-align: center;
+    display: block;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    border: solid 3px #000000;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.active-1 {
+    background-color: #000000;
+}
+
+.display-2, .display-3 {
+    display: none;
+}
+
+#fert-2{
+    cursor: pointer;
+    fill: #F06D30;
+}
+
+@media (min-width:0) {
+    main {
+        width: 250px;
+    }
+}
+
+@media (min-width:560px) {
+    header, main {
+        margin-left: unset;
+        margin-right: unset;
+        margin-top: 50px;
+    }
+
+    main {
+        width: 260px;
+        margin-left: 20px;
+    }
+
+    #root {
+        flex-direction: row;
+    }
+}
+
+@media (min-width:800px) {
+    main {
+        width: 490px;
+    }
+
+    .display-2 {
+        display: inline-block;
+    }
+
+    .active-1 {
+        display: none;
+    }
+
+    .active-2 {
+        background-color: #000000;
+    }
+}
+
+@media (min-width:1040px) {
+    main {
+        width: 730px;
+    }
+
+    .display-3 {
+        display: inline-block;
+    }
+
+    .dots {
+        display: none;
+    }
+}
