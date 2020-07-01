@@ -38,6 +38,7 @@ header {
 }
 
 .light {
+    margin-top: -5px;
     font-weight: 300;
 }
 
@@ -87,10 +88,6 @@ main {
     display: none;
 }
 
-/*#group-1 {*/
-/*    display: inline-block;*/
-/*}*/
-
 .selected {
     display: inline-block;
 }
@@ -117,14 +114,6 @@ main {
     display: none;
 }
 
-/*#dot-1 {*/
-/*    background-color: #000000;*/
-/*}*/
-
-/*#group-2, #group-3 {*/
-/*    display: none;*/
-/*}*/
-
 #fert-2{
     cursor: pointer;
     fill: #F06D30;
@@ -139,17 +128,40 @@ main {
 }
 
 .bg-modal {
-    width: 240px;
-    height: 160px;
-    background-color: rgba(0, 0, 0, 0);
+    width: 234px;
+    height: 154px;
+    background-color: #F9F6E7;
     position: absolute;
     justify-content: center;
     align-items: center;
+    opacity: 0;
     z-index: 1;
 }
 
+.modal-content {
+    width: 234px;
+    height: 154px;
+    overflow: auto;
+    opacity: 0;
+}
+
+.modal-content .title, .modal-content .text {
+    padding: 0;
+}
+
+.modal-button {
+    background: none;
+    color: #000000;
+    border: solid #000000 3px;
+    width: 70%;
+}
+
 .bg-modal:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.modal-content:hover {
+    opacity: 1;
 }
 
 @media (min-width:0) {
