@@ -25,6 +25,10 @@ header {
     padding-left: 10px;
 }
 
+.padded {
+    padding-bottom: 5px;
+}
+
 .bold {
     font-weight: 700;
 }

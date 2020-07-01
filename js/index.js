@@ -122,15 +122,12 @@ function changeBackground() {
 }
 
 function selectProject(n) {
-    const display1 = getComputedStyle(document.getElementById('group-1'), null).display
-    const display2 = getComputedStyle(document.getElementById('group-2'), null).display
-    const display3 = getComputedStyle(document.getElementById('group-3'), null).display
     switch(n) {
         case 1:
-            if(display1 === 'block') {
+            if(document.getElementById('group-1').classList.contains('active')) {
                 break;
             } else {
-                if(display2 === 'block') {
+                if(document.getElementById('group-2').classList.contains('active')) {
                     document.getElementById('dot-1').classList.add('selected');
                     document.getElementById('dot-2').classList.remove('selected');
                     document.getElementById('group-1').classList.add('active');
@@ -144,12 +141,11 @@ function selectProject(n) {
                     break;
                 }
             }
-            break;
         case 2:
-            if(display2 === 'block') {
-                if(display1 === 'block') {
+            if(document.getElementById('group-2').classList.contains('active')) {
+                if(document.getElementById('group-1').classList.contains('active')) {
                     break;
-                } else if(display3 === 'block') {
+                } else if(document.getElementById('group-3').classList.contains('active')) {
                     document.getElementById('dot-2').classList.add('selected');
                     document.getElementById('dot-3').classList.remove('selected');
                     document.getElementById('group-1').classList.add('active');
@@ -158,7 +154,7 @@ function selectProject(n) {
                     break;
                 }
             } else {
-                if(display1 === 'block') {
+                if(document.getElementById('group-1').classList.contains('active')) {
                     document.getElementById('dot-2').classList.add('selected');
                     document.getElementById('dot-1').classList.remove('selected');
                     document.getElementById('group-2').classList.add('active');
@@ -174,13 +170,14 @@ function selectProject(n) {
             }
             break;
         case 3:
-            if(display3 === 'block') {
+            if(document.getElementById('group-3').classList.contains('active')) {
                 break;
             } else {
-                if(display1 === 'block') {
-                    if(display2 === 'block') {
+                if(document.getElementById('group-1').classList.contains('active')) {
+                    if(document.getElementById('group-2').classList.contains('active')) {
                         document.getElementById('dot-3').classList.add('selected');
                         document.getElementById('dot-2').classList.remove('selected');
+                        document.getElementById('dot-1').classList.remove('selected');
                         document.getElementById('group-3').classList.add('active');
                         document.getElementById('group-1').classList.remove('active');
                         break;
@@ -199,7 +196,5 @@ function selectProject(n) {
                     break;
                 }
             }
-            break;
     }
-
 }
