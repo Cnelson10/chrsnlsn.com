@@ -80,9 +80,14 @@ main {
 
 .proj-group {
     float: left;
+    display: none;
 }
 
-.display-1 {
+/*#group-1 {*/
+/*    display: inline-block;*/
+/*}*/
+
+.selected {
     display: inline-block;
 }
 
@@ -105,20 +110,28 @@ main {
     margin: 0 2px;
     border: solid 3px #000000;
     border-radius: 50%;
-    display: inline-block;
-}
-
-.active-1 {
-    background-color: #000000;
-}
-
-.display-2, .display-3 {
     display: none;
 }
+
+/*#dot-1 {*/
+/*    background-color: #000000;*/
+/*}*/
+
+/*#group-2, #group-3 {*/
+/*    display: none;*/
+/*}*/
 
 #fert-2{
     cursor: pointer;
     fill: #F06D30;
+}
+
+.selected, .dot:hover {
+    background-color: #000000;
+}
+
+.active {
+    display: inline-block;
 }
 
 @media (min-width:0) {
@@ -149,17 +162,17 @@ main {
         width: 490px;
     }
 
-    .display-2 {
-        display: inline-block;
-    }
+    /*#group-2 {*/
+    /*    display: inline-block;*/
+    /*}*/
 
-    .active-1 {
-        display: none;
-    }
+    /*#dot-1 {*/
+    /*    display: none;*/
+    /*}*/
 
-    .active-2 {
-        background-color: #000000;
-    }
+    /*#dot-2 {*/
+    /*    background-color: #000000;*/
+    /*}*/
 }
 
 @media (min-width:1040px) {
@@ -167,11 +180,11 @@ main {
         width: 730px;
     }
 
-    .display-3 {
-        display: inline-block;
-    }
+    /*#group-3 {*/
+    /*    display: inline-block;*/
+    /*}*/
 
-    .dots {
-        display: none;
-    }
+    /*.dots {*/
+    /*    display: none;*/
+    /*}*/
 }
