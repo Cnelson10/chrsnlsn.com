@@ -112,12 +112,23 @@ function resize() {
 function changeBackground() {
     let bodyStyle = window.getComputedStyle(document.body, null);
     let bgColor = bodyStyle.backgroundColor;
+
+    let projects = document.getElementsByClassName("bg-modal");
+
     if(bgColor === 'rgb(249, 246, 231)') {
         document.body.style.backgroundColor = "#F06D30";
         document.getElementById('fert-2').style.fill = "#F9F6E7";
+        let i;
+        for (i = 0; i < projects.length; i++) {
+            projects[i].style.backgroundColor = "#F06D30";
+        }
     } else {
         document.body.style.backgroundColor = "#F9F6E7";
         document.getElementById('fert-2').style.fill = "#F06D30";
+        let i;
+        for (i = 0; i < projects.length; i++) {
+            projects[i].style.backgroundColor = "#F9F6E7";
+        }
     }
 }
 
