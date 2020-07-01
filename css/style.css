@@ -138,6 +138,20 @@ main {
     display: inline-block;
 }
 
+.bg-modal {
+    width: 240px;
+    height: 160px;
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.bg-modal:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 @media (min-width:0) {
     main {
         width: 250px;
@@ -165,30 +179,10 @@ main {
     main {
         width: 490px;
     }
-
-    /*#group-2 {*/
-    /*    display: inline-block;*/
-    /*}*/
-
-    /*#dot-1 {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*#dot-2 {*/
-    /*    background-color: #000000;*/
-    /*}*/
 }
 
 @media (min-width:1040px) {
     main {
         width: 730px;
     }
-
-    /*#group-3 {*/
-    /*    display: inline-block;*/
-    /*}*/
-
-    /*.dots {*/
-    /*    display: none;*/
-    /*}*/
 }
