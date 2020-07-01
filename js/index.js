@@ -17,8 +17,10 @@ window.onload = () => {
         selectProject(3)
     }, false)
 
-    smScreen.addEventListener('change', resize);
-    medScreen.addEventListener('change', resize);
+    // smScreen.addEventListener('change', resize);
+    // medScreen.addEventListener('change', resize);
+    smScreen.addListener(resize);
+    medScreen.addListener(resize);
 
     if(smScreen.matches) {
         document.getElementById('dot-1').classList.add('active');
