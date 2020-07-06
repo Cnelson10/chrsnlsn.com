@@ -6,19 +6,59 @@ window.onload = () => {
     egg.addEventListener('click', changeBackground)
     const dot1 = document.getElementById('dot-1')
     dot1.addEventListener('click', function(){
-        selectProject(1)
+        selectProjectGroup(1)
     }, false)
     const dot2 = document.getElementById('dot-2')
     dot2.addEventListener('click', () => {
-        selectProject(2)
+        selectProjectGroup(2)
     }, false)
     const dot3 = document.getElementById('dot-3')
     dot3.addEventListener('click', () => {
+        selectProjectGroup(3)
+    }, false)
+
+    document.getElementById('b1').addEventListener('click', function(){
+        selectProject(1)
+    }, false)
+    document.getElementById('b2').addEventListener('click', function(){
+        selectProject(2)
+    }, false)
+    document.getElementById('b3').addEventListener('click', function(){
         selectProject(3)
     }, false)
+    document.getElementById('b4').addEventListener('click', function(){
+        selectProject(4)
+    }, false)
+    document.getElementById('b5').addEventListener('click', function(){
+        selectProject(5)
+    }, false)
+    document.getElementById('b6').addEventListener('click', function(){
+        selectProject(6)
+    }, false)
+    document.getElementById('b7').addEventListener('click', function(){
+        selectProject(7)
+    }, false)
+    document.getElementById('b8').addEventListener('click', function(){
+        selectProject(8)
+    }, false)
+    document.getElementById('b9').addEventListener('click', function(){
+        selectProject(9)
+    }, false)
+    document.getElementById('b10').addEventListener('click', function(){
+        selectProject(10)
+    }, false)
+    document.getElementById('b11').addEventListener('click', function(){
+        selectProject(11)
+    }, false)
+    document.getElementById('b12').addEventListener('click', function(){
+        selectProject(12)
+    }, false)
+
+    document.getElementById('x').addEventListener('click', closeProject);
 
     // smScreen.addEventListener('change', resize);
     // medScreen.addEventListener('change', resize);
+    // addEventLister does not work for this for Safari
     smScreen.addListener(resize);
     medScreen.addListener(resize);
 
@@ -134,7 +174,7 @@ function changeBackground() {
     }
 }
 
-function selectProject(n) {
+function selectProjectGroup(n) {
     switch(n) {
         case 1:
             if(document.getElementById('group-1').classList.contains('active')) {
@@ -210,4 +250,15 @@ function selectProject(n) {
                 }
             }
     }
+}
+
+function selectProject(n) {
+    const title = 'p' + n;
+    document.getElementById('project-title').innerHTML = document.getElementById(title).innerText;
+    document.getElementById('x').style.display = 'inline-block';
+}
+
+function closeProject() {
+    document.getElementById('project-title').innerHTML = 'projects';
+    document.getElementById('x').style.display = 'none';
 }
