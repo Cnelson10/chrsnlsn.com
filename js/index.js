@@ -17,43 +17,6 @@ window.onload = () => {
         selectProjectGroup(3)
     }, false)
 
-    document.getElementById('b1').addEventListener('click', function(){
-        selectProject(1)
-    }, false)
-    document.getElementById('b2').addEventListener('click', function(){
-        selectProject(2)
-    }, false)
-    document.getElementById('b3').addEventListener('click', function(){
-        selectProject(3)
-    }, false)
-    document.getElementById('b4').addEventListener('click', function(){
-        selectProject(4)
-    }, false)
-    document.getElementById('b5').addEventListener('click', function(){
-        selectProject(5)
-    }, false)
-    document.getElementById('b6').addEventListener('click', function(){
-        selectProject(6)
-    }, false)
-    document.getElementById('b7').addEventListener('click', function(){
-        selectProject(7)
-    }, false)
-    document.getElementById('b8').addEventListener('click', function(){
-        selectProject(8)
-    }, false)
-    document.getElementById('b9').addEventListener('click', function(){
-        selectProject(9)
-    }, false)
-    document.getElementById('b10').addEventListener('click', function(){
-        selectProject(10)
-    }, false)
-    document.getElementById('b11').addEventListener('click', function(){
-        selectProject(11)
-    }, false)
-    document.getElementById('b12').addEventListener('click', function(){
-        selectProject(12)
-    }, false)
-
     document.getElementById('x').addEventListener('click', closeProject);
 
     // smScreen.addEventListener('change', resize);
@@ -69,9 +32,6 @@ window.onload = () => {
         document.getElementById('dot-2').classList.remove('selected');
         document.getElementById('dot-3').classList.add('active');
         document.getElementById('dot-3').classList.remove('selected');
-        document.getElementById('group-1').classList.add('active');
-        document.getElementById('group-2').classList.remove('active');
-        document.getElementById('group-3').classList.remove('active');
     } else {
         if(medScreen.matches) {
             document.getElementById('dot-1').classList.remove('active');
@@ -80,9 +40,7 @@ window.onload = () => {
             document.getElementById('dot-2').classList.add('selected');
             document.getElementById('dot-3').classList.add('active');
             document.getElementById('dot-3').classList.remove('selected');
-            document.getElementById('group-1').classList.add('active');
-            document.getElementById('group-2').classList.add('active');
-            document.getElementById('group-3').classList.remove('active');
+
         } else {
             document.getElementById('dot-1').classList.remove('active');
             document.getElementById('dot-1').classList.add('selected');
@@ -90,9 +48,6 @@ window.onload = () => {
             document.getElementById('dot-2').classList.remove('selected');
             document.getElementById('dot-3').classList.remove('active');
             document.getElementById('dot-3').classList.remove('selected');
-            document.getElementById('group-1').classList.add('active');
-            document.getElementById('group-2').classList.add('active');
-            document.getElementById('group-3').classList.add('active');
         }
     }
 }

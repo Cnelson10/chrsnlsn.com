@@ -93,7 +93,7 @@ main {
     margin: 0 auto;
 }
 
-.projects {
+#projects {
     display: inline-block;
     padding-left: 10px;
 }
@@ -114,9 +114,9 @@ main {
     text-align: center;
 }
 
-.dots {
+#dots {
     text-align: center;
-    display: block;
+    display: none;
     padding-left: 10px;
 }
 
