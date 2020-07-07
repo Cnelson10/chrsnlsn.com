@@ -2,6 +2,7 @@ const smScreen = window.matchMedia("(max-width: 799px)");
 const medScreen = window.matchMedia("(max-width: 1039px)");
 let expanded = false;
 let alt = false;
+let active = 1;
 
 window.onload = () => {
     const egg =  document.getElementById('egg')
@@ -166,14 +167,14 @@ function selectProjectGroup(n) {
                     document.getElementById('dot-2').classList.remove('selected');
                     document.getElementById('group-1').classList.add('active');
                     document.getElementById('group-2').classList.remove('active');
-                    break;
                 } else {
                     document.getElementById('dot-1').classList.add('selected');
                     document.getElementById('dot-3').classList.remove('selected');
                     document.getElementById('group-1').classList.add('active');
                     document.getElementById('group-3').classList.remove('active');
-                    break;
                 }
+                active = 1;
+                break;
             }
         case 2:
             if(document.getElementById('group-2').classList.contains('active')) {
@@ -184,6 +185,7 @@ function selectProjectGroup(n) {
                     document.getElementById('dot-3').classList.remove('selected');
                     document.getElementById('group-1').classList.add('active');
                     document.getElementById('group-3').classList.remove('active');
+                    active = 2;
                 } else {
                     break;
                 }
@@ -193,14 +195,13 @@ function selectProjectGroup(n) {
                     document.getElementById('dot-1').classList.remove('selected');
                     document.getElementById('group-2').classList.add('active');
                     document.getElementById('group-1').classList.remove('active');
-                    break;
                 } else {
                     document.getElementById('dot-2').classList.add('selected');
                     document.getElementById('dot-3').classList.remove('selected');
                     document.getElementById('group-2').classList.add('active');
                     document.getElementById('group-3').classList.remove('active');
-                    break;
                 }
+                active = 2;
             }
             break;
         case 3:
@@ -214,21 +215,20 @@ function selectProjectGroup(n) {
                         document.getElementById('dot-1').classList.remove('selected');
                         document.getElementById('group-3').classList.add('active');
                         document.getElementById('group-1').classList.remove('active');
-                        break;
                     } else {
                         document.getElementById('dot-3').classList.add('selected');
                         document.getElementById('dot-1').classList.remove('selected');
                         document.getElementById('group-3').classList.add('active');
                         document.getElementById('group-1').classList.remove('active');
-                        break;
                     }
                 } else {
                     document.getElementById('dot-3').classList.add('selected');
                     document.getElementById('dot-2').classList.remove('selected');
                     document.getElementById('group-3').classList.add('active');
                     document.getElementById('group-2').classList.remove('active');
-                    break;
+
                 }
+                active = 3;
             }
     }
 }
