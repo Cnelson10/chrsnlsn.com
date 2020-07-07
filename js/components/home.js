@@ -163,14 +163,31 @@ function home(id) {
     expanded = false;
 
     if(smScreen.matches) {
-        document.getElementById('group-1').classList.add('active');
-        document.getElementById('group-2').classList.remove('active');
-        document.getElementById('group-3').classList.remove('active');
-    } else {
-        if(medScreen.matches) {
+        if(active === 1){
             document.getElementById('group-1').classList.add('active');
+            document.getElementById('group-2').classList.remove('active');
+            document.getElementById('group-3').classList.remove('active');
+        } else if(active === 2) {
+            document.getElementById('group-1').classList.remove('active');
             document.getElementById('group-2').classList.add('active');
             document.getElementById('group-3').classList.remove('active');
+        } else {
+            document.getElementById('group-1').classList.remove('active');
+            document.getElementById('group-2').classList.remove('active');
+            document.getElementById('group-3').classList.add('active');
+        }
+    } else {
+        if(medScreen.matches) {
+            if(active === 1 || active === 2) {
+                document.getElementById('group-1').classList.add('active');
+                document.getElementById('group-2').classList.add('active');
+                document.getElementById('group-3').classList.remove('active');
+            } else {
+                document.getElementById('group-1').classList.remove('active');
+                document.getElementById('group-2').classList.add('active');
+                document.getElementById('group-3').classList.add('active');
+            }
+
         } else {
             document.getElementById('group-1').classList.add('active');
             document.getElementById('group-2').classList.add('active');

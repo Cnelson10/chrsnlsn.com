@@ -17,8 +17,8 @@ function p1(id) {
             </section>
         </div>
         <div class="proj-buttons">
-            <a href="https://github.com/Capstone-Projects-2020-Spring/TwitterTrends" class="medium large proj-link">view code</a>
-            <a href="" class="medium large proj-link">view project</a>
+            <a href="https://github.com/Capstone-Projects-2020-Spring/TwitterTrends" target="_blank" class="medium large proj-link">view code</a>
+            <a href="https://github.com/Capstone-Projects-2020-Spring/TwitterTrends" target="_blank" class="medium large proj-link">view project</a>
         </div>
         <ul class="skills">
             <li><span>javascript</span></li>
