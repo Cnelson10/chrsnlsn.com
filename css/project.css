@@ -1,0 +1,116 @@
+.proj-img {
+    width: 234px;
+    height: 154px;
+    border: solid #000000 3px;
+}
+
+.select-proj {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.proj-section {
+    display: block;
+}
+
+.desc {
+    display: inline;
+}
+
+.skills {
+    display: inline-block;
+    list-style-position: inside;
+    float: left;
+    width: 90px;
+    padding-inline-start: 0;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.skills li span{
+    margin-left: -10px;
+}
+
+.proj-buttons {
+    margin-top: 5px;
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.proj-link {
+    background: none;
+    color: #000000;
+    border: solid #000000 3px;
+    cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
+    margin-top: 5px;
+    width: 144px;
+    height: 40px;
+    line-height: 40px;
+}
+
+@media (min-width:800px) {
+    .proj-img {
+        width: 474px;
+        height: 314px;
+    }
+
+    .select-proj {
+        float: left;
+        display: inline;
+        width: 325px;
+    }
+
+    .skills {
+        float: none;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width:1040px) {
+    .proj-img {
+        display: inline-block;
+        float: left;
+    }
+
+    .select-proj {
+        width: 230px;
+        float: right;
+        padding-left: 10px;
+        margin-top: 0;
+    }
+
+    .proj-section {
+        width: 230px;
+        display: inline-block;
+    }
+
+    .proj-buttons {
+        width: 310px;
+    }
+
+    .skills {
+        float: right;
+        width: 400px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .skills li {
+        display: inline-block;
+    }
+
+    .skills li:before {
+        content: '\2022';
+        margin-right: 5px;
+        font-weight: 700;
+    }
+
+    .skills li span {
+        margin-left: 0;
+    }
+}
