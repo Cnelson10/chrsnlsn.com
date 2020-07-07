@@ -65,10 +65,16 @@ header {
     width: 30px;
     height: 35px;
     display: none;
+    padding-left: 10px;
+}
+
+#x a {
+    text-decoration: none;
+    color: inherit;
 }
 
 #project-title {
-    padding-right: 100px;
+    padding-right: 10px;
     display: inline-block;
 }
 
@@ -171,6 +177,9 @@ main {
     border: solid #000000 3px;
     width: 70%;
     cursor: pointer;
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    text-decoration: none;
 }
 
 .bg-modal:hover {
@@ -189,9 +198,7 @@ main {
 
 @media (min-width:560px) {
     header, main {
-        margin-left: unset;
-        margin-right: unset;
-        margin-top: 50px;
+        margin: 50px 0;
     }
 
     main {

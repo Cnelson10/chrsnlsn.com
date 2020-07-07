@@ -1,5 +1,6 @@
 const smScreen = window.matchMedia("(max-width: 799px)");
 const medScreen = window.matchMedia("(max-width: 1039px)");
+let expanded = false;
 
 window.onload = () => {
     const egg =  document.getElementById('egg')
@@ -59,49 +60,63 @@ function resize() {
         document.getElementById('dot-3').classList.add('active');
         if(document.getElementById('dot-1').classList.contains('selected') || document.getElementById('dot-2').classList.contains('selected')){
             if(document.getElementById('dot-1').classList.contains('selected')){
-                document.getElementById('group-1').classList.add('active');
-                document.getElementById('group-2').classList.remove('active');
                 document.getElementById('dot-2').classList.remove('selected');
-                document.getElementById('group-3').classList.remove('active');
                 document.getElementById('dot-3').classList.remove('selected');
+                if(!expanded) {
+                    document.getElementById('group-1').classList.add('active');
+                    document.getElementById('group-2').classList.remove('active');
+                    document.getElementById('group-3').classList.remove('active');
+                }
             } else {
-                document.getElementById('group-2').classList.add('active');
-                document.getElementById('group-1').classList.remove('active');
                 document.getElementById('dot-1').classList.remove('selected');
-                document.getElementById('group-3').classList.remove('active');
                 document.getElementById('dot-3').classList.remove('selected');
+                if(!expanded) {
+                    document.getElementById('group-2').classList.add('active');
+                    document.getElementById('group-1').classList.remove('active');
+                    document.getElementById('group-3').classList.remove('active');
+                }
             }
         } else {
-            document.getElementById('group-3').classList.add('active');
             document.getElementById('dot-3').classList.add('selected');
-            document.getElementById('group-1').classList.remove('active');
             document.getElementById('dot-1').classList.remove('selected');
-            document.getElementById('group-2').classList.remove('active');
             document.getElementById('dot-2').classList.remove('selected');
+            if(!expanded) {
+                document.getElementById('group-3').classList.add('active');
+                document.getElementById('group-1').classList.remove('active');
+                document.getElementById('group-2').classList.remove('active');
+            }
         }
     } else {
         if(medScreen.matches) {
             document.getElementById('dot-1').classList.remove('active');
             document.getElementById('dot-2').classList.add('active');
             document.getElementById('dot-3').classList.add('active');
-            document.getElementById('group-2').classList.add('active');
+            if(!expanded) {
+                document.getElementById('group-2').classList.add('active');
+            }
             if(document.getElementById('dot-1').classList.contains('selected') || document.getElementById('dot-2').classList.contains('selected')){
                 document.getElementById('dot-2').classList.add('selected');
-                document.getElementById('group-1').classList.add('active');
                 document.getElementById('dot-3').classList.remove('selected');
-                document.getElementById('group-3').classList.remove('active');
+                if(!expanded) {
+                    document.getElementById('group-1').classList.add('active');
+                    document.getElementById('group-3').classList.remove('active');
+                }
             } else {
-                document.getElementById('group-3').classList.add('active');
                 document.getElementById('dot-2').classList.remove('selected');
-                document.getElementById('group-1').classList.remove('active');
+                if(!expanded) {
+                    document.getElementById('group-3').classList.add('active');
+                    document.getElementById('group-1').classList.remove('active');
+                }
             }
         } else {
             document.getElementById('dot-1').classList.remove('active');
             document.getElementById('dot-2').classList.remove('active');
             document.getElementById('dot-3').classList.remove('active');
-            document.getElementById('group-1').classList.add('active');
-            document.getElementById('group-2').classList.add('active');
-            document.getElementById('group-3').classList.add('active');
+            if(!expanded) {
+                document.getElementById('group-1').classList.add('active');
+                document.getElementById('group-2').classList.add('active');
+                document.getElementById('group-3').classList.add('active');
+            }
         }
     }
 }

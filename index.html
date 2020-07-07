@@ -7,10 +7,23 @@
     <meta name="theme-color" content="#000000">
     <title>chris nelson</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/project.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600;700&display=swap" rel="stylesheet">
     <script src="js/index.js"></script>
     <script src="js/urlRouter.js"></script>
     <script src="js/components/home.js"></script>
+    <script src="js/components/p1.js"></script>
+    <script src="js/components/p2.js"></script>
+    <script src="js/components/p3.js"></script>
+    <script src="js/components/p4.js"></script>
+    <script src="js/components/p5.js"></script>
+    <script src="js/components/p6.js"></script>
+    <script src="js/components/p7.js"></script>
+    <script src="js/components/p8.js"></script>
+    <script src="js/components/p9.js"></script>
+    <script src="js/components/p10.js"></script>
+    <script src="js/components/p11.js"></script>
+    <script src="js/components/p12.js"></script>
   </head>
   <body>
     <div id="root">
@@ -329,6 +342,8 @@
           <div class ="bold" id="x"><a href="#/">+</a></div>
           <div class="line"></div>
           <div id="projects">
+            <img class="proj-img" src="" alt="">
+
           </div>
           <div id="dots">
             <div class="dot" id="dot-1"></div>
@@ -343,17 +358,17 @@
 
       myRoutes['/'] = home;
       myRoutes['/twitter_trends'] = p1;
-      // myRoutes['/project2'] = p2;
-      // myRoutes['/project3'] = p3;
-      // myRoutes['/project4'] = p4;
-      // myRoutes['/project5'] = p5;
-      // myRoutes['/project6'] = p6;
-      // myRoutes['/project7'] = p7;
-      // myRoutes['/project8'] = p8;
-      // myRoutes['/project9'] = p9;
-      // myRoutes['/project10'] = p10;
-      // myRoutes['/project11'] = p11;
-      // myRoutes['/project12'] = p12;
+      myRoutes['/project2'] = p2;
+      myRoutes['/project3'] = p3;
+      myRoutes['/project4'] = p4;
+      myRoutes['/project5'] = p5;
+      myRoutes['/project6'] = p6;
+      myRoutes['/project7'] = p7;
+      myRoutes['/project8'] = p8;
+      myRoutes['/project9'] = p9;
+      myRoutes['/project10'] = p10;
+      myRoutes['/project11'] = p11;
+      myRoutes['/project12'] = p12;
 
       urlRouter({
         routeArray: myRoutes,
