@@ -178,4 +178,16 @@ function home(id) {
         }
     }
 
+    let projects = document.getElementsByClassName("bg-modal");
+    let i;
+    if(alt){
+        for (i = 0; i < projects.length; i++) {
+            projects[i].style.backgroundColor = "#F06D30";
+        }
+    } else {
+        for (i = 0; i < projects.length; i++) {
+            projects[i].style.backgroundColor = "#F9F6E7";
+        }
+    }
+
 }

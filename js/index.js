@@ -1,6 +1,7 @@
 const smScreen = window.matchMedia("(max-width: 799px)");
 const medScreen = window.matchMedia("(max-width: 1039px)");
 let expanded = false;
+let alt = false;
 
 window.onload = () => {
     const egg =  document.getElementById('egg')
@@ -127,19 +128,29 @@ function changeBackground() {
 
     let projects = document.getElementsByClassName("bg-modal");
 
+    if(!alt) {
+        alt = true;
+    } else {
+        alt = false;
+    }
+
     if(bgColor === 'rgb(249, 246, 231)') {
         document.body.style.backgroundColor = "#F06D30";
         document.getElementById('fert-2').style.fill = "#F9F6E7";
-        let i;
-        for (i = 0; i < projects.length; i++) {
-            projects[i].style.backgroundColor = "#F06D30";
+        if(!expanded){
+            let i;
+            for (i = 0; i < projects.length; i++) {
+                projects[i].style.backgroundColor = "#F06D30";
+            }
         }
     } else {
         document.body.style.backgroundColor = "#F9F6E7";
         document.getElementById('fert-2').style.fill = "#F06D30";
-        let i;
-        for (i = 0; i < projects.length; i++) {
-            projects[i].style.backgroundColor = "#F9F6E7";
+        if(!expanded){
+            let i;
+            for (i = 0; i < projects.length; i++) {
+                projects[i].style.backgroundColor = "#F9F6E7";
+            }
         }
     }
 }
