@@ -12,8 +12,9 @@ function urlRouter(params) {
 
         let path = location.hash.slice(1) || '/';
         if (!routes[path]) {
+            document.getElementById('project-title').innerHTML = 'error';
             document.getElementById(contentId).innerHTML = "Error: link '" + path +
-                "' was never added to the routing.";
+                "' is not valid.";
         } else {
             routes[path](contentId);
         }
